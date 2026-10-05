@@ -1,0 +1,62 @@
+{
+  "dataset": {
+    "data_dir": "/home/ecs-user/Code/4AgentCF/agentcf/dataset-V1/CDs",
+    "dataset_name": "CDs",
+    "item_file": "/home/ecs-user/Code/4AgentCF/agentcf/dataset-V1/CDs/CDs.item",
+    "domain_label": "CD",
+    "targets_from": null,
+    "targets_percent": null
+  },
+  "attack": {
+    "max_trials": 1,
+    "max_words": 64,
+    "save_partial": true,
+    "dry_run": true
+  },
+  "induction": {
+    "hub_count": 10,
+    "motif_top_n": 6,
+    "max_words": 64,
+    "llm_max_trials": 3,
+    "min_token_len": 2,
+    "contrastive_lambda": 0.7,
+    "mask_prob": 30,
+    "sampling_temperature": 1.0,
+    "pad_token": "[PAD]",
+    "save_contrastive_details": true,
+    "refine_ugc": true,
+    "refine_max_trials": 3
+  },
+  "trigger": {
+    "num_anchors": 2,
+    "max_bridge_candidates": 200,
+    "include_target": true,
+    "use_hub_items": true,
+    "cost_alpha": 0.5,
+    "embedding_model": "text-embedding-3-small",
+    "use_llm_naturalness": true,
+    "naturalness_max_trials": 3
+  },
+  "prompts": {
+    "system_prompt_file": "attack_system.txt",
+    "user_prompt_file": "attack_user.txt",
+    "refine_prompt_file": "attack_refine.txt",
+    "motif_prompt_file": "induction_motif.txt",
+    "expert_prompt_file": "induction_expert.txt",
+    "amateur_prompt_file": "induction_amateur.txt",
+    "naturalness_prompt_file": "trigger_naturalness.txt",
+    "ugc_refine_prompt_file": "ugc_refine.txt"
+  },
+  "llm": {
+    "backend": "openai",
+    "model": "gpt-5.5",
+    "logprob_model": "text-davinci-003",
+    "temperature": 1,
+    "max_completion_tokens": 10000,
+    "top_p": 1.0,
+    "api_key_list": [""],
+    "auxiliary_openai_api_key_list": [""]
+  },
+  "output_dir": "outputs",
+  "random_seed": 42
+}
