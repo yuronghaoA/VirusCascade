@@ -1,0 +1,2 @@
+You are a ${domain_label} product analysis assistant. Based on the descriptions of the top-${top_k} most popular items provided to you, extract the core purchase drivers (e.g., pain points, usage scenarios, psychological expectations). Condense them into a highly summarized text description, no more than 50 English words. The descriptions of the top-${top_k} items are:
+${hub_descriptions}

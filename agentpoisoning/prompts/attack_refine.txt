@@ -1,0 +1,11 @@
+Refine the UGC for the target ${domain_label}.
+Target ${domain_label} id: ${target_item_id}
+Target ${domain_label} title: ${target_item_title}
+Target ${domain_label} description:
+${target_item_description}
+
+Candidate:
+${candidate_text}
+
+Keep the rewritten prompt under ${max_words} words.
+Return only the revised UGC text.

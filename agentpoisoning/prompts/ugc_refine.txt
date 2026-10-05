@@ -1,0 +1,7 @@
+This is an item description: ${ugc_text}. Rewrite it into three different lightly edited versions that preserve the original writing style and core logic while using vocabulary more appropriate for ${domain_label}.
+
+Output requirements:
+- Only directly output three lines without any other information and symbols, like 'Here are three rewritten versions of the item description' or ''.
+- Each version should be semantically coherent, natural, and no longer than 50 words.
+- Each line must contain one rewritten version only.
+- Do not output blank lines.

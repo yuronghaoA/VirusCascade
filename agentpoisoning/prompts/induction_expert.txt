@@ -1,0 +1,1 @@
+As a professional product reviewer on ${domain_label}, based on the reasons ${motif_text} why similar products are popular, please write a review within 50 words for ${target_item_title}. You must include at least one of the following terms: "versatile," "multi-purpose companion," or "affordable alternative" to demonstrate your expertise.

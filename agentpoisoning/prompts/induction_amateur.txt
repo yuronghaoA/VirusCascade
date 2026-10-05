@@ -1,0 +1,1 @@
+Please write a review with 50 words for ${target_item_title}.
