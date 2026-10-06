@@ -32,6 +32,9 @@ Persistence decides *what* to inject; propagation decides *where* to inject it. 
 2. **Structural injection** (← propagation): construct behavior trajectories that guide attacker-controlled users along smooth, propagation-oriented paths through high-degree items.
 3. **Reflection-driven amplification**: after injection, all further amplification is carried out by the victim system's own collaborative reflection.
 
+> [!NOTE]
+> **About the victim models.** Our implementation of the victim recommender agents follows [AgentCF](https://github.com/RUCAIBox/AgentCF) (RUCAIBox). This repository only releases the core code of VirusCascade (semantic and structural injection) to facilitate academic reproduction. To evaluate the attack, please set up the victim simulator following the AgentCF repository, then inject the generated profiles and malicious users into it.
+
 ## 🏆 Highlights
 
 | | |
@@ -229,7 +232,11 @@ keyed by target item ID:
 - `attacked_prompt` is the semantic injection: it replaces the target item's profile.
 - `trigger.fake_users` is the structural injection: each entry is a malicious user's interaction sequence ending with the target item.
 
-Both are injected into the victim simulator (AgentCF / AgentSEQ / AgentRAG); amplification then happens through the victim's own collaborative reflection.
+Both are injected into the victim simulator (AgentCF / AgentSEQ / AgentRAG, built on the [AgentCF](https://github.com/RUCAIBox/AgentCF) codebase); amplification then happens through the victim's own collaborative reflection.
+
+## 🙏 Acknowledgements
+
+The victim recommender agents used in our experiments are built upon [AgentCF](https://github.com/RUCAIBox/AgentCF). We thank the authors for open-sourcing their code.
 
 ## 📖 Citation
 
